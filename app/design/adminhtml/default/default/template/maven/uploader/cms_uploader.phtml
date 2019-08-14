@@ -55,8 +55,9 @@
     </div>
     <script type="text/javascript">
         //<![CDATA[
-<?php $magentoVersion = Mage::getVersion(); ?>
-        <?php if (version_compare($magentoVersion, '1.9.3', '>=')): ?>
+        <?php $magentoVersion = Mage::getVersion(); ?>
+        <?php $patch8788NotApplied = Mage::helper('maven_html5uploader')->ifPatch8788NotAppied($this); ?>
+        <?php if (version_compare($magentoVersion, '1.9.3', '>=') || !$patch8788NotApplied): ?>
             var uploader = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getJsonConfig() ?>);
         <?php else: ?>
             <?php echo $this->getJsObjectName() ?> = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getConfigJson() ?>);
