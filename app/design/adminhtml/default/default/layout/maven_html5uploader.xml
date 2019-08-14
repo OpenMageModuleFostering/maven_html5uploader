@@ -2,22 +2,22 @@
 <layout>
     <editor>
         <reference name="head">
-            <action method="addCss"><name>css/maven_html5upload/styles.css</name></action>
-            <action method="addItem">
+            <action method="addCss" ifconfig="maven/config/enable"><name>css/maven_html5upload/styles.css</name></action>
+            <action method="addItem" ifconfig="maven/config/enable">
                 <type>skin_js</type>
                 <name>js/maven_html5upload/jsuploader.js</name>
             </action>
-            <action method="addItem">
+            <action method="addItem" ifconfig="maven/config/enable">
                 <type>skin_js</type>
                 <name>js/maven_html5upload/uploader.js</name>
             </action>
-            <action method="addItem">
+            <action method="addItem" ifconfig="maven/config/enable">
                 <type>skin_js</type>
                 <name>js/maven_html5upload/script.js</name>
             </action>
         </reference>
         <reference name="wysiwyg_images.uploader">
-            <action method="setTemplate">
+            <action method="setTemplate" ifconfig="maven/config/enable">
                 <template>maven/uploader/cms_uploader.phtml</template>
             </action>
         </reference>

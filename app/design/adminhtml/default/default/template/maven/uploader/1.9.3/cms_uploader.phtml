@@ -55,12 +55,8 @@
     </div>
     <script type="text/javascript">
         //<![CDATA[
-<?php $magentoVersion = Mage::getVersion(); ?>
-        <?php if (version_compare($magentoVersion, '1.9.3', '>=')): ?>
-            var uploader = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getJsonConfig() ?>);
-        <?php else: ?>
-            <?php echo $this->getJsObjectName() ?> = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getConfigJson() ?>);
-        <?php endif; ?>
+
+        var uploader = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getJsonConfig() ?>);
         (function() {
             // call initialization file
             if (window.File && window.FileList && window.FileReader) {

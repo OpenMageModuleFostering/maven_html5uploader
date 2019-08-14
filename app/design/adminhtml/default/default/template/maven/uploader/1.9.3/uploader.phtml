@@ -4,7 +4,6 @@
                 <form action="{{url}}" enctype="multipart/form-data" encoding="multipart/form-data" method="post" target="uploadBlockIframe-{{id}}">
                     <input type="file" name="image"/>
                     <input type="hidden" name="Filename"/>
-                    <input type="hidden" name="form_key" value="{{formKey}}"/>
                     <input type="hidden" name="Upload" value="Submit Query"/>
                 </form>
                 <iframe name="uploadBlockIframe-{{id}}" style="display:none;"></iframe>
@@ -28,7 +27,7 @@
 
 <div class="maven_html5upload">
     <form id="upload"
-          action="<?php echo Mage::getModel('adminhtml/url')->addSessionParam()->getUrl('adminhtml/ajax/cmsupload' ,array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>"
+          action="<?php echo Mage::getModel('adminhtml/url')->addSessionParam()->getUrl('adminhtml/ajax/upload' ,array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>"
           method="POST"
           enctype="multipart/form-data"
           data-remove-action="<?php echo Mage::getModel('adminhtml/url')->addSessionParam()->getUrl('adminhtml/ajax/remove' ,array('form_key' => Mage::getSingleton('core/session')->getFormKey()));?>"
@@ -55,12 +54,8 @@
     </div>
     <script type="text/javascript">
         //<![CDATA[
-<?php $magentoVersion = Mage::getVersion(); ?>
-        <?php if (version_compare($magentoVersion, '1.9.3', '>=')): ?>
-            var uploader = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getJsonConfig() ?>);
-        <?php else: ?>
-            <?php echo $this->getJsObjectName() ?> = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getConfigJson() ?>);
-        <?php endif; ?>
+
+        var uploader = new JsUploader('<?php echo $this->getHtmlId() ?>', <?php echo $this->getJsonConfig() ?>);
         (function() {
             // call initialization file
             if (window.File && window.FileList && window.FileReader) {

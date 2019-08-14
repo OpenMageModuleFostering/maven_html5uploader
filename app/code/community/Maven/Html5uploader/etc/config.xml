@@ -25,6 +25,11 @@
                     <cms_wysiwyg_images_content_uploader>Maven_Html5uploader_Block_Adminhtml_Cms_Wysiwyg_Images_Content_Uploader</cms_wysiwyg_images_content_uploader>
                 </rewrite>
             </adminhtml>
+            <uploader>
+                <rewrite>
+                    <multiple>Maven_Html5uploader_Block_Uploader_Multiple</multiple>
+                </rewrite>
+            </uploader>
         </blocks>
         <helpers>
             <maven_html5uploader>
