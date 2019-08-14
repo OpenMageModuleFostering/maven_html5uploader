@@ -3,7 +3,7 @@
     <modules>
         <Maven_Html5uploader>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Maven_Html5uploader>
     </modules>
 </config>
