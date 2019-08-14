@@ -205,11 +205,8 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			filedrag.addEventListener("dragleave", FileDragHover, false);
 			filedrag.addEventListener("drop", FileSelectHandler, false);
 			filedrag.style.display = "block";
-
 			// remove submit button
 			submitbutton.style.display = "none";
 		}
 
 	}
-
-
