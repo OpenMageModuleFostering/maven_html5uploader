@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Maven_Html5uploader",
+    "name": "OpenMageModuleFostering\/Maven_Html5uploader",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "html5 uploader",
     "authors": [
-    {
-        "name": "Maven",
-        "email": "extension@mavenecommerce.com"
-    }
-],
+        {
+            "name": "Maven",
+            "email": "extension@mavenecommerce.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
