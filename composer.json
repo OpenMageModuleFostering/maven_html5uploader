@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Maven_Html5uploader",
+    "name": "openmage-module-fostering\/maven_html5uploader",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "html5 uploader",
     "authors": [
